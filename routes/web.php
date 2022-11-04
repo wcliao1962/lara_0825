@@ -18,10 +18,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     //return redirect(route('posts.index'));
-    $post = new Post();
-    $post->title="test_title";
-    $post->content="test_content";
-    $post->save();
+//    $post = new Post();
+//    $post->title="test_title";
+//    $post->content="test_content";
+//    $post->save();
+
+    Post::create([
+        'title'=>'test title2',
+        'content'=>'test content2',
+    ]);
+
     return 'Saved, OK!';
 });
 
